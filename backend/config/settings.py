@@ -31,7 +31,7 @@ TESTING = ('test' == sys.argv[1]) if sys.argv else False
 # Append module dir
 sys.path.append(os.path.join(BASE_DIR, 'apps'))
 
-ALLOWED_HOSTS = ["your-app.onrender.com"]
+ALLOWED_HOSTS = ["financetracker1.onrender.com","localhost"]
 
 
 # Application definition
