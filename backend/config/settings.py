@@ -69,11 +69,12 @@ MIDDLEWARE = [
 ]
 
 
-CORS_ORIGIN_WHITELIST = (
+CORS_ALLOWED_ORIGINS = (
     'http://127.0.0.1',
     'http://localhost:3000',
     'https://iagro.uz',
     'http://iagro.uz',
+    "https://finance-tracker1-eight.vercel.app"
 )
 
 ROOT_URLCONF = 'config.urls'
