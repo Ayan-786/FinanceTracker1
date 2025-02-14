@@ -24,14 +24,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w99yaag9a9-w&&a(eqjacnu2xjxe2z!jul%4@gp7k4k=p509pd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ['DEBUG_VALUE'] == 'FALSE'
+DEBUG = os.getenv('DEBUG_VALUE', 'FALSE') == 'TRUE'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 TESTING = ('test' == sys.argv[1]) if sys.argv else False
 
 # Append module dir
 sys.path.append(os.path.join(BASE_DIR, 'apps'))
 
-ALLOWED_HOSTS = ["financetracker1.onrender.com","localhost"]
+ALLOWED_HOSTS = ["financetracker1.onrender.com","localhost",'financetracker-backend-dk4u.onrender.com',]
 
 
 # Application definition
